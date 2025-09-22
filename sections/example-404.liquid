@@ -1,0 +1,49 @@
+<div class="{{ section.settings.text_align }} mt-32">
+  <h1 class="{{ section.settings.font_size }} font-bold">
+    {{ section.settings.title }}
+  </h1>
+  
+  <p class="text-2xl">{{ section.settings.subtext_title }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Example 404",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "id": "subtext_title",
+      "label": "Body",
+      "default": "The page that you are looking for is not found"
+    },
+    {
+      "type": "select",
+      "id": "font_size",
+      "label": "Font size",
+      "options": [
+        { "value": "text-4l", "label": "Medium" },
+        { "value": "text-5xl", "label": "Large" },
+        { "value": "text-7xl", "label": "Extra Large" }
+      ],
+      "default": "text-2xl"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        { "value": "text-left", "label": "Left" },
+        { "value": "text-center", "label": "Center" },
+        { "value": "text-right", "label": "Right" }
+      ],
+      "default": "text-center"
+    }
+  ]
+}
+{% endschema %}
