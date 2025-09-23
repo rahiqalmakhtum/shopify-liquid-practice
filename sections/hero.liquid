@@ -1,0 +1,67 @@
+<section class="relative bg-gray-100 py-20">
+  <div class="container mx-auto px-6 text-center">
+    <h1 class="{{ section.settings.title_size }} font-bold text-gray-900">
+      {{ section.settings.title }}
+    </h1>
+    <p class="{{ section.settings.subtitle_size }} mt-4 text-gray-700">
+      {{ section.settings.subtitle }}
+    </p>
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_link }}" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Welcome to Our Store"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subheading",
+      "default": "We have amazing products for you"
+    },
+    {
+      "type": "select",
+      "id": "title_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "text-4xl", "label": "Medium" },
+        { "value": "text-5xl", "label": "Large" },
+        { "value": "text-6xl", "label": "Extra Large" }
+      ],
+      "default": "text-5xl"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_size",
+      "label": "Subheading size",
+      "options": [
+        { "value": "text-xl", "label": "Medium" },
+        { "value": "text-2xl", "label": "Large" }
+      ],
+      "default": "text-xl"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    }
+  ]
+}
+{% endschema %}

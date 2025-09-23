@@ -1,0 +1,7 @@
+"sections": {
+  "hero": {
+    "type": "hero",
+    "settings": {}
+  },
+  "other_section": { ... }
+}
