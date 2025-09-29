@@ -1,7 +1,22 @@
-"sections": {
-  "hero": {
-    "type": "hero",
-    "settings": {}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "test": {
+      "type": "test",
+      "settings": {}
+    }
   },
-  "other_section": { ... }
+  "order": ["hero", "test"]
 }
